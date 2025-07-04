@@ -1,6 +1,6 @@
 ## RTN-IP-Tracker
 
-A simple IP Tracker from **Red Team Nexus** that fetches any IP's approximate location with Google Maps support for your OSINT practice.
+A simple IP Tracker from **Red Team Nexus** that fetches any IP's approximate location with Google Maps support for OSINT practice.
 
 ---
 
@@ -22,44 +22,12 @@ cd RTN-IP-Tracker
 python3 ip-tracker.py
 ```
 
-✅ Enter any IP you want to track and get approximate country, region, city, and a Google Maps link.
-
----
-
-## 📌 Notes
-
-- For ethical hacking learning and OSINT practice only.
-- Works on Termux, Kali Linux, and Linux distributions.
-- Internet connection is required.## RTN-IP-Tracker
-
-A simple IP Tracker that fetches your public IP and shows approximate location with a Google Maps link.
-
----
-
-## 📌 Installation
-
-```bash
-apt update && apt upgrade -y
-pkg install git python -y
-pip install requests
-git clone https://github.com/RedTeamNexus/RTN-IP-Tracker.git
-cd RTN-IP-Tracker
-bash install.sh
-```
-
----
-
-## 📌 Usage
-
-```bash
-python3 ip-tracker.py
-```
-
-✅ You will get your public IP, approximate location, and a Google Maps link for easy tracking practice.
+✅ Enter any IP you want to track and get approximate country, region, city, and Google Maps link.
 
 ---
 
 ## Notes
 
 - For ethical hacking learning and OSINT practice only.
-- Requires an active internet connection.
+- Works on Termux, Kali Linux, and Linux.
+- Internet connection required.
