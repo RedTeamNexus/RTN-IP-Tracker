@@ -1,15 +1,19 @@
 import requests
 
-ip = requests.get('https://api.ipify.org').text
-print(f"\n[+] Your Public IP: {ip}")
+print("\n[+] RTN-IP-TRACKER | TRACK ANY IP LOCATION\n")
 
-res = requests.get(f'http://ip-api.com/json/{ip}')
-data = res.json()
+ip = input("[?] Enter the IP address to track: ")
 
-lat = data['lat']
-lon = data['lon']
+try:
+    res = requests.get(f'http://ip-api.com/json/{ip}')
+    data = res.json()
 
-print(f"""
+    if data['status'] == 'success':
+        lat = data['lat']
+        lon = data['lon']
+
+        print(f"""
+[+] IP: {ip}
 [+] Country: {data['country']}
 [+] Region: {data['regionName']}
 [+] City: {data['city']}
@@ -17,12 +21,11 @@ print(f"""
 [+] ISP: {data['isp']}
 [+] Lat: {lat}
 [+] Lon: {lon}
+
+[+] Google Maps Link:
+https://www.google.com/maps/search/?api=1&query={lat},{lon}
 """)
-
-print(f"[+] Google Maps Link: https://www.google.com/maps/search/?api=1&query={lat},{lon}")
-
-print(f"\n[+] Static Location Data:")
-print("District: Goalpara")
-print("State: Assam")
-print("Country: India")
-print("PIN: 783129\n")
+    else:
+        print("[!] Invalid IP address or API limit reached. Try again later.")
+except:
+    print("[!] Something went wrong. Check your internet connection.")
